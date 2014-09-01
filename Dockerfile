@@ -5,7 +5,8 @@
 FROM fedora:20
 MAINTAINER Raghavendra Talur <raghavendratalur@gmail.com>
 
-RUN yum -y install python-devel python-setuptools gcc deltarpm yum-utils git  \
+RUN yum -y install deltarpm
+RUN yum -y install python-devel python-setuptools gcc yum-utils git           \
                    autoconf automake bison dos2unix flex glib2-devel          \
                    libaio-devel libattr-devel libibverbs-devel                \
                    librdmacm-devel libtool libxml2-devel make openssl-devel   \
