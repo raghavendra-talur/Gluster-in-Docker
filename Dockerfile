@@ -16,7 +16,7 @@ RUN yum -y install python-devel python-setuptools gcc yum-utils git           \
                    net-tools systemtap-sdt-devel attr psmisc findutils which  \
                    xfsprogs yajl-devel lvm2-devel e2fsprogs mock nfs-utils    \
                    openssh-server supervisor openssl fuse-libs wget lvm2-devel\
-                   fuse-devel cmockery2
+                   fuse-devel cmockery2 cmockery2-devel
 
 
 RUN cd /root && \
