@@ -7,7 +7,7 @@ A Dockerfile and its related files for building a container which can run gluste
 git clone the repo.
 Install docker.
 docker build using the Dockerfile in the repo.
-Start the docker container: docker run -i -t --privileged=true imageName
+Start the docker container: docker run -d --privileged=true imageName
 Use docker inspect to get ip of the container.
 ssh into root@IP with password "password".
 cd into glusterfs
