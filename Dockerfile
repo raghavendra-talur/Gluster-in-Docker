@@ -68,7 +68,7 @@ RUN cd /root && \
     cd glusterfs  && \
     ./autogen.sh && \
     ./configure --enable-debug && \
-    make ;
+    make install;
 
 
 RUN mkdir -p /var/run/sshd
