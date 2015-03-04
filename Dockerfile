@@ -2,7 +2,7 @@
 # Clones the git repo of gluster.
 # Uses supervisord to run all services required for gluster.
 
-FROM fedora:20
+FROM fedora:21
 MAINTAINER Raghavendra Talur <raghavendratalur@gmail.com>
 
 RUN yum -y install deltarpm
@@ -62,6 +62,7 @@ RUN yum -y install which
 RUN yum -y install xfsprogs
 RUN yum -y install yajl-devel
 RUN yum -y install yum-utils
+RUN yum -y install userspace-rcu-devel
 
 RUN cd /root && \
     git clone git://review.gluster.org/glusterfs && \
