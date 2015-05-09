@@ -57,6 +57,7 @@ RUN yum -y install rpm-build
 RUN yum -y install strace
 RUN yum -y install supervisor
 RUN yum -y install systemtap-sdt-devel
+RUN yum -y install sqlite-devel
 RUN yum -y install vim
 RUN yum -y install wget
 RUN yum -y install which
