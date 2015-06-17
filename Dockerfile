@@ -24,6 +24,7 @@ RUN yum -y install gcc
 RUN yum -y install gdb
 RUN yum -y install git
 RUN yum -y install glib2-devel
+RUN yum -y install hostname
 RUN yum -y install libacl-devel
 RUN yum -y install libaio-devel
 RUN yum -y install libattr-devel
