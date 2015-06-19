@@ -2,7 +2,7 @@
 # Clones the git repo of gluster.
 # Uses supervisord to run all services required for gluster.
 
-FROM fedora:21
+FROM fedora:22
 MAINTAINER Raghavendra Talur <raghavendratalur@gmail.com>
 
 RUN yum -y install deltarpm
