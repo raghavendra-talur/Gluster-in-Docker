@@ -76,7 +76,6 @@ RUN mkdir -p /var/log/supervisor
 RUN echo 'root:password' | chpasswd
 RUN ssh-keygen -A
 
-ADD UpdateGlusterAndInstall.sh /usr/sbin/UpdateGlusterAndInstall.sh
 ADD MakeFUSEdev.sh   /usr/sbin/MakeFUSEdev.sh
 ADD supervisord.conf /etc/supervisord.conf
 
