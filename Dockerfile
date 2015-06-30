@@ -35,6 +35,7 @@ RUN dnf -y install libxml2-devel
 RUN dnf -y install lvm2-devel
 RUN dnf -y install lvm2-devel
 RUN dnf -y install make
+RUN dnf -y install man-db
 RUN dnf -y install mock
 RUN dnf -y install net-tools
 RUN dnf -y install nfs-utils
@@ -42,6 +43,7 @@ RUN dnf -y install openssh-server
 RUN dnf -y install openssl
 RUN dnf -y install openssl-devel
 RUN dnf -y install pkgconfig
+RUN dnf -y install procps-ng
 RUN dnf -y install psmisc
 RUN dnf -y install python-devel
 RUN dnf -y install python-devel
@@ -65,6 +67,7 @@ RUN dnf -y install which
 RUN dnf -y install xfsprogs
 RUN dnf -y install yajl-devel
 RUN dnf -y install userspace-rcu-devel
+RUN dnf -y update
 
 RUN cd /root && git clone git://review.gluster.org/glusterfs
 
@@ -73,11 +76,12 @@ RUN mkdir -p /var/log/supervisor
 RUN echo 'root:password' | chpasswd
 RUN ssh-keygen -A
 
-ADD makefusedev.sh   /usr/sbin/makefusedev.sh
+ADD UpdateGlusterAndInstall.sh /usr/sbin/UpdateGlusterAndInstall.sh
+ADD MakeFUSEdev.sh   /usr/sbin/MakeFUSEdev.sh
 ADD supervisord.conf /etc/supervisord.conf
 
 
 EXPOSE 22 111 245 443 24007 2049 8080 6010 6011 6012 38465 38466 38468 38469 49152 49153 49154 49156 49157 49158 49159 49160 49161 49162
 
 
-CMD ["/usr/bin/supervisord"]
+CMD /usr/bin/supervisord --configuration /etc/supervisord.conf  --logfile /var/log/supervisor/supervisord.log
