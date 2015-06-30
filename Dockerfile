@@ -64,7 +64,6 @@ RUN dnf -y install wget
 RUN dnf -y install which
 RUN dnf -y install xfsprogs
 RUN dnf -y install yajl-devel
-RUN dnf -y install dnf-utils
 RUN dnf -y install userspace-rcu-devel
 
 RUN cd /root && git clone git://review.gluster.org/glusterfs
