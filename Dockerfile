@@ -67,13 +67,7 @@ RUN yum -y install yajl-devel
 RUN yum -y install yum-utils
 RUN yum -y install userspace-rcu-devel
 
-RUN cd /root && \
-    git clone git://review.gluster.org/glusterfs && \
-    cd glusterfs  && \
-    ./autogen.sh && \
-    ./configure --enable-debug && \
-    make install;
-
+RUN cd /root && git clone git://review.gluster.org/glusterfs
 
 RUN mkdir -p /var/run/sshd
 RUN mkdir -p /var/log/supervisor
