@@ -42,6 +42,7 @@ RUN dnf -y install nfs-utils
 RUN dnf -y install openssh-server
 RUN dnf -y install openssl
 RUN dnf -y install openssl-devel
+RUN dnf -y install perl-Test-Harness
 RUN dnf -y install pkgconfig
 RUN dnf -y install procps-ng
 RUN dnf -y install psmisc
